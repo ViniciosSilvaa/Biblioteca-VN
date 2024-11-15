@@ -1,0 +1,299 @@
+/* Reset de Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Corpo */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header .logo h1 {
+    font-size: 24px;
+}
+
+.header .navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.header .navbar ul li {
+    margin: 0 15px;
+}
+
+.header .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.header .navbar ul li a:hover {
+    color: #f8b400;
+}
+
+/* Seção Inicial */
+.inicio {
+    background: #f8b400;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.inicio h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.inicio p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.inicio .btn {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.inicio .btn:hover {
+    background-color: #333;
+}
+
+/* Seção de Coleção */
+.colecao {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.colecao h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.colecao .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.colecao .livro {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.colecao .livro:hover {
+    transform: scale(1.05);
+}
+
+.colecao .livro img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.colecao .livro h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.colecao .livro p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.colecao .livro .alterarStatus {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.colecao .livro .alterarStatus:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.colecao .livro .alterarStatus:hover {
+    background-color: #f8b400;
+}
+
+.colecao .livro .disponivel {
+    color: green;
+    font-weight: bold;
+}
+
+.colecao .livro .emprestado {
+    color: red;
+    font-weight: bold;
+}
+
+/* Seção de Login Administrativo */
+#login {
+    background: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#login input {
+    padding: 12px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#login button {
+    padding: 12px 20px;
+    background-color: #1e1e1e;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+#login button:hover {
+    background-color: #f8b400;
+}
+
+#login .erro {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Seção Sobre */
+.sobre {
+    background-color: #f8b400;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Seção Contato */
+.contato {
+    padding: 50px 20px;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.contato h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contato form {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contato form label {
+    font-size: 18px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.contato form input, .contato form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.contato form button {
+    padding: 12px 20px;
+    background-color: #1e1e1e;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contato form button:hover {
+    background-color: #f8b400;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 16px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .navbar ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .colecao .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #login input, #login button {
+        width: 90%;
+    }
+
+    .contato form {
+        width: 90%;
+    }
+}

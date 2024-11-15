@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca com Capas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Biblioteca VN</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#colecao">Coleção</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção de Login do Administrador -->
+        <section id="login" class="login">
+            <div class="container">
+                <h2>Acesso Administrativo</h2>
+                <input type="password" id="senhaAdmin" placeholder="Digite a senha de administrador">
+                <button onclick="verificarLogin()">Entrar</button>
+                <p id="mensagem" class="erro"></p>
+            </div>
+        </section>
+
+        <!-- Seção Coleção -->
+        <section id="colecao" class="colecao">
+            <div class="container">
+                <h2>Nossa Coleção</h2>
+                <div class="grid">
+                    <!-- Livro 1 -->
+                    <div class="livro" id="livro1">
+                        <img src="https://m.media-amazon.com/images/I/91r5G8RxqfL._SY425_.jpg" alt="Capa do Livro 1">
+                        <h3>É Assim que acaba</h3>
+                        <p>Colleen Hoover (Autor), Priscila Catão (Tradutor)</p>
+                        <p>Status: <span id="status1" class="disponivel">Disponível</span></p>
+                        <button id="btn1" class="alterarStatus" onclick="mudarStatus('livro1', 'status1')" disabled>Alterar Status</button>
+                    </div>
+                    <!-- Livro 2 -->
+                    <div class="livro" id="livro2">
+                        <img src="https://m.media-amazon.com/images/I/418hYhj8vZL._SY445_SX342_.jpg" alt="Capa do Livro 2">
+                        <h3>Elon Musk</h3>
+                        <p>Walter Isaacson (Autor), Rogerio W. Galindo (Tradutor), Rosiane Correia de Freitas (Tradutor)</p>
+                        <p>Status: <span id="status2" class="disponivel">Disponível</span></p>
+                        <button id="btn2" class="alterarStatus" onclick="mudarStatus('livro2', 'status2')" disabled>Alterar Status</button>
+                    </div>
+                    <!-- Livro 3 -->
+                    <div class="livro" id="livro3">
+                        <img src="https://m.media-amazon.com/images/I/51iOu+-oKWL._SY445_SX342_.jpg" alt="Capa do Livro 3">
+                        <h3>Jujutsu Kaisen: Batalha de Feiticeiros Vol. 1</h3>
+                        <p>por Gege Akutami (Autor)</p>
+                        <p>Status: <span id="status3" class="disponivel">Disponível</span></p>
+                        <button id="btn3" class="alterarStatus" onclick="mudarStatus('livro3', 'status3')" disabled>Alterar Status</button>
+                    </div>
+                    <!-- Livro 4 -->
+                    <div class="livro" id="livro4">
+                        <img src="https://m.media-amazon.com/images/I/91MAequ2koL._SY425_.jpg" alt="Capa do Livro 4">
+                        <h3>Jujutsu Kaisen: Batalha de Feiticeiros Vol. 2</h3>
+                        <p>por Gege Akutami (Autor)</p>
+                        <p>Status: <span id="status4" class="disponivel">Disponível</span></p>
+                        <button id="btn4" class="alterarStatus" onclick="mudarStatus('livro4', 'status4')" disabled>Alterar Status</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Biblioteca VN. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Inclusão do arquivo JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
